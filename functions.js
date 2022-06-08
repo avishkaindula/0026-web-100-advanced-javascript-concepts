@@ -78,3 +78,12 @@ console.log(sumUp(...inputNumbers));
 // The 3 dots in ...inputNumbers will convert the array into a normal list of values.
 // So the function can accept those values without any problem.
 // The 3 dots here is called a "spread operator."
+
+// ---------------------------------------------------------------------------------------------------
+
+console.dir(sumUp);
+// if we console.dir a function inside a browser console,
+// we can see that Functions are also "objects"
+// As we can see there, a function has some properties which are inferred automatically.
+// sumUp.someProperty = 32;
+// We can add some custom properties to a function like this if we need to.
