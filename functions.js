@@ -4,7 +4,11 @@ function greetUser(greetingPrefix, userName = "user") {
   // userName = "user" is a default parameter
   // Default parameters hold "optional" values in case the user doesn't provide any value.
   // The default parameters should come at the end of the parameters list.
-  console.log(greetingPrefix + " " + userName + "!");
+  // console.log(greetingPrefix + " " + userName + "!");
+  // We can write the above code using another way called "template literals."
+  // In template literals, we can build a string using backtick instead of single quotes.
+  // Backtick => ` (located right below esc key in the keyboard.)
+  console.log(`${greetingPrefix} ${userName}!`)
 }
 
 greetUser("Hello", "Indula");
