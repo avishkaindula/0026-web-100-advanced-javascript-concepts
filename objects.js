@@ -37,6 +37,17 @@ class Job {
     // We can assign different parameters to that properties so that we can pass
     // different values for these properties through those parameters when we call this class outside this block.
   }
+  // We should always add a constructor method at the beginning of the class.
+
+  // After we add the constructor, other methods can be added like following.
+  describe() {
+    console.log(
+      `I'm a ${this.title}, I work in ${this.location} and I earn ${this.salary}`
+    );
+    // We use "this" keyword in order to refer to the object.
+    // In the constructor we use this keyword to refer to the object "that's about to be created."
+    // And in all the other methods of this blueprint, this keyword refers to the "already created object."
+  }
 }
 
 const job1 = new Job("Developer", "New York", 50000);
@@ -47,8 +58,14 @@ const job1 = new Job("Developer", "New York", 50000);
 
 // Now we can create multiple objects easily by using this blueprint.
 const job2 = new Job("Doctor", "Sri Lanka", 50000);
-const job3 = new Job("Engineer", "Sri Lanka", 5000);
+const job3 = new Job("Engineer", "Sri Lanka", 50000);
 
 console.log(job1);
 console.log(job2);
 console.log(job3);
+
+job1.describe();
+job2.describe();
+job3.describe();
+// We've used the same describe() method for all the jobs.
+// Only the values are being changed.
