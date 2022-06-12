@@ -16,10 +16,17 @@ function readFile() {
   //   // "promises" would be an alternative for that.
   // });
 
-  fs.readFile("data.txt").then(function (fileData) {
-    console.log("File parsing done!");
-    console.log(fileData.toString());
-  });
+  fs.readFile("data.txt")
+    .then(function (fileData) {
+      console.log("File parsing done!");
+      console.log(fileData.toString());
+    })
+    .catch(function (error) {
+      console.log(error);
+      // We use .catch to find out any errors occurred in a promise.
+      // .then methods are there to handle the success cases.
+      // This is how we handle errors of promises.
+    });
   // If we import the promises package, we don't need to add a callback function anymore.
   // Instead readFile now returns a so-called promise, which is simply a kind of object
   // that's baked into browser side JS and NodeJS.

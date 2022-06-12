@@ -31,6 +31,15 @@ function readFile() {
     // called by readFile for us once it's done with it's operation.
     // error parameter will hold information if reading the file fails.
     // fileData parameter will hold the data if parsing and reading the file did succeed.
+
+    // We cannot use try catch to find the errors of callback functions and promises.
+    // Because try would only check if calling read file succeeds and not whether the
+    // result of read file is a success.
+    // The error parameter of the callback function is used to catch errors instead.
+    // if (error) {
+    //   // .......
+    // }
+
     console.log("File parsing done!");
     console.log(fileData.toString());
   });
